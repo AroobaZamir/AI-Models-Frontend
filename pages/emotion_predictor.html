@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Predictor</title>
+    <link rel="stylesheet" href="../assets/css/emotion_predictor.css" />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="icon" href="../assets/images/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Font - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../assets/js/header.js" defer></script>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <main>
+      <h2>Emotion Predictor</h2>
+      <div class="input-container">
+        <textarea
+          id="input-text"
+          placeholder="Enter your text here..."
+          rows="6"
+        ></textarea>
+        <div class="file-upload">
+          <label for="file-input" class="file-label">
+            <i class="fas fa-upload"></i> Upload File
+          </label>
+          <input type="file" id="file-input" class="file-input" />
+        </div>
+      </div>
+      <button id="predict-emotion-btn">Predict Emotion</button>
+      <div id="emotion-output">
+        <h3>Predicted Emotion</h3>
+        <p id="emotion-text"></p>
+      </div>
+    </main>
+  </body>
+</html>

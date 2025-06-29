@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental Health Questionnaire</title>
+    <link rel="stylesheet" href="../assets/css/disorder_predictor.css" />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="icon" href="../assets/images/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Font - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../assets/js/header.js" defer></script>
+    <script src="../assets/js/disorder_predictor.js" defer></script>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <div class="container">
+      <h1>Mental Health Questionnaire</h1>
+      <div id="question-container"></div>
+      <div class="button-container">
+        <button id="back-button" class="button" style="visibility: hidden">
+          Back
+        </button>
+        <button id="next-button" class="button">Next</button>
+        <button id="print-button" class="button" style="display: none">
+          Print
+        </button>
+      </div>
+      <div class="prediction-section" style="display: none">
+        <button id="predict-button" class="button">Predict Disorder</button>
+        <textarea
+          id="disorderPrediction"
+          rows="4"
+          placeholder="Predicted disorder will appear here..."
+        ></textarea>
+      </div>
+    </div>
+  </body>
+</html>

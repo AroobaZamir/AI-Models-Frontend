@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summarization</title>
+    <link rel="stylesheet" href="../assets/css/summarization.css" />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="icon" href="../assets/images/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Font - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../assets/js/header.js" defer></script>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <main>
+      <h2>Text Summarization</h2>
+      <div class="input-container">
+        <textarea
+          id="input-text"
+          placeholder="Enter your text here..."
+          rows="10"
+        ></textarea>
+        <div class="button_container">
+          <div class="file-upload">
+            <label for="file-input" class="file-label">
+              <i class="fas fa-plus"></i>
+              Attach File
+            </label>
+            <input type="file" id="file-input" class="file-input" />
+          </div>
+        </div>
+        <button id="summarize-btn">Summarize Text</button>
+        <div id="summary-output">
+          <h3>Summary</h3>
+          <p id="summary-text"></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

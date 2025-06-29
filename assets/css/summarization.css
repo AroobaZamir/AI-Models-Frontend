@@ -1,0 +1,292 @@
+/* Modern Dark Theme Summarization CSS */
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-tertiary: #252525;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --accent-color: #4f46e5;
+    --accent-hover: #6366f1;
+    --danger-color: #ef4444;
+    --success-color: #22c55e;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --card-bg: #1e1e1e;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Header is hidden in this page, but keeping for consistency with other pages */
+  header {
+    display: none;
+  }
+  
+  main {
+    text-align: center;
+    padding: 40px 24px;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-bottom: 80px;
+  }
+  
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 2px solid rgba(79, 70, 229, 0.4);
+    border-radius: var(--border-radius);
+    resize: vertical;
+    transition: var(--transition);
+    min-height: 150px;
+  }
+  
+  textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+  }
+  
+  textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+  }
+  
+  .button_container {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .file-upload {
+    position: relative;
+    display: inline-block;
+    margin-top: 4px;
+  }
+  
+  .file-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+  }
+  
+  .file-label:hover {
+    background-color: var(--accent-color);
+    color: white;
+  }
+  
+  .file-label i {
+    font-size: 16px;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  #summarize-btn {
+    margin-top: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+  }
+  
+  #summarize-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+  }
+  
+  #summary-output {
+    margin-top: 32px;
+    padding: 24px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  #summary-output h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  #summary-text {
+    font-size: 16px;
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 16px;
+    background-color: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 80px;
+    overflow: hidden;
+    resize: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
+  }
+  
+  .predict-emotion-btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+  }
+  
+  .predict-emotion-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+  }
+  
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    main {
+      padding: 24px 16px;
+    }
+    
+    h2 {
+      font-size: 24px;
+    }
+    
+    .input-container {
+      width: 100%;
+    }
+    
+    .file-label {
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+    
+    #summarize-btn {
+      font-size: 14px;
+      padding: 10px 20px;
+      width: 100%;
+    }
+    
+    .predict-emotion-btn {
+      font-size: 14px;
+      padding: 10px 20px;
+      width: 100%;
+    }
+    
+    #summary-output {
+      padding: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    main {
+      padding: 16px 12px;
+    }
+    
+    h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    
+    textarea {
+      padding: 12px;
+    }
+    
+    .file-label {
+      padding: 8px 12px;
+    }
+    
+    #summary-output h3 {
+      font-size: 18px;
+    }
+    
+    #summary-text {
+      padding: 12px;
+      font-size: 14px;
+    }
+    
+    footer {
+      position: relative;
+      padding: 12px;
+    }
+  }
+  
+  /* Improve focus states for accessibility */
+  button:focus, a:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+  
+  /* Add smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Import Inter font */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
